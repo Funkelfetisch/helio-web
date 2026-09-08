@@ -24,7 +24,23 @@
  </div>
 </section>
 <section class="process"><div class="wrap section"><div class="section-heading"><p class="eyebrow">02 / From idea to installation</p><h2>Let’s get the details right.</h2></div><ol><li><span>01</span><h3>Tell us your idea</h3><p>Share your space, dates, location and the experience you want to create.</p></li><li><span>02</span><h3>Confirm the setup</h3><p>We discuss equipment, availability, power, mounting and delivery or installation needs.</p></li><li><span>03</span><h3>Review your quote</h3><p>You receive the scope, price and terms to review before placing an order or booking.</p></li></ol></div></section>
-<section class="wrap section contact" id="contact"><div><p class="eyebrow">03 / Get in touch</p><h2>What are you<br><em>imagining?</em></h2><p>Product questions, rental plans or support for a sphere you already own — we’re here to help.</p></div><div class="contact-details"><a class="email" href="mailto:info@helio.lighting">info@helio.lighting <span aria-hidden="true">↗</span></a><p>For support, include your model or order reference and a brief description of the issue.</p><p class="small">Enquiry links open your email app. You can also copy the address into your preferred email service. Sending an enquiry does not place an order or reserve equipment.</p></div></section>
+<section class="wrap section contact" id="contact"><div><p class="eyebrow">03 / Get in touch</p><h2>What are you<br><em>imagining?</em></h2><p>Product questions, rental plans or support for a sphere you already own — share the essentials and we’ll reply by email.</p><p class="small">Availability, configuration, price and timing are confirmed in an individual quote. An enquiry does not place an order or reserve equipment.</p><a class="email" href="mailto:info@helio.lighting">Prefer email? <span>info@helio.lighting ↗</span></a></div>
+ <form class="enquiry-form" action="/api/enquiries" method="post">
+  <div class="field"><label for="name">Name <span>optional</span></label><input id="name" name="name" autocomplete="name" maxlength="120"></div>
+  <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required></div>
+  <div class="field"><label for="intent">What can we help with?</label><select id="intent" name="intent" required><option value="">Choose one</option><option value="sphere">A sphere or custom build</option><option value="event">An event or rental</option><option value="support">Support for existing equipment</option></select></div>
+  <div class="field"><label for="location">Location</label><input id="location" name="location" autocomplete="country-name" maxlength="160" placeholder="City and country" required></div>
+  <div class="field"><label for="target_date">Target date <span>optional</span></label><input id="target_date" name="target_date" type="date"><label class="check"><input type="checkbox" name="date_not_decided" value="yes"> Not decided yet</label></div>
+  <div class="field field-wide"><label for="description">Tell us about the project</label><textarea id="description" name="description" rows="5" maxlength="2000" required></textarea></div>
+  <div class="field"><label for="size">Preferred size <span>optional</span></label><input id="size" name="size" maxlength="80" placeholder="For example, 70 cm"></div>
+  <div class="field"><label for="quantity">Quantity <span>optional</span></label><input id="quantity" name="quantity" inputmode="numeric" maxlength="20"></div>
+  <div class="field"><label for="budget">Budget range <span>optional</span></label><input id="budget" name="budget" maxlength="80"></div>
+  <div class="field"><label for="mounting">Mounting idea <span>optional</span></label><input id="mounting" name="mounting" maxlength="160" placeholder="Floor, truss, or not decided"></div>
+  <div class="honeypot" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+  <label class="check consent field-wide"><input type="checkbox" name="privacy_ack" value="yes" required> I have read the <a href="privacy.html">privacy information</a> for enquiries.</label>
+  <div class="form-actions field-wide"><button class="button" type="submit">Send enquiry <span aria-hidden="true">↗</span></button><p class="small">If the form is unavailable, email <a href="mailto:info@helio.lighting">info@helio.lighting</a>.</p></div>
+ </form>
+</section>
 </main>
 <footer class="wrap"><div class="footer-top"><img class="logo" src="assets/helio-logo.svg" alt="HELIO" width="128" height="32"><div><a href="https://auravia.ltd">An Auravia brand ↗</a><a href="privacy.html">Privacy &amp; legal</a></div></div><p>© 2026 Auravia Ltd · Cyprus · HE487392 · VAT CY60329972V</p></footer>
 </body></html>

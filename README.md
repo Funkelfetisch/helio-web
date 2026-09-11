@@ -18,9 +18,9 @@ Preview locally with `python3 -m http.server 8769` and inspect desktop/mobile la
 
 ## Durable enquiry preview
 
-The durable-enquiry preview adds a Pages Function backed by a D1 binding named `HELIO_ENQUIRIES`. It stores only submitted enquiry fields, returns a server-issued reference, keeps the email fallback, rate-limits by a salted one-way connection fingerprint and removes ordinary enquiry rows older than 180 days during subsequent form processing. There is no public read endpoint; owner review uses authenticated D1 administration.
+The durable-enquiry preview adds a Pages Function backed by a D1 binding named `HELIO_ENQUIRIES`. It stores only submitted enquiry fields, returns a server-issued reference, keeps the email fallback, rate-limits by a salted one-way connection fingerprint and removes ordinary enquiry rows older than 180 days during subsequent form processing. There is no public read endpoint. Owner review is available only through `GET /api/owner/enquiries` with `Authorization: Bearer <OWNER_EXPORT_TOKEN>`; it returns at most 100 rows, sends no cacheable response and is intentionally omitted from the public site.
 
-Production requires a separately created D1 database and `RATE_LIMIT_SALT` secret, followed by an isolated preview deployment and an accepted test submission before any live promotion.
+Remote preview requires a separately created D1 database plus `RATE_LIMIT_SALT` and `OWNER_EXPORT_TOKEN` secrets, followed by an isolated preview deployment and an accepted test submission/readback before any live promotion.
 
 Run the isolated local preview without contacting Cloudflare:
 

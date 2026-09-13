@@ -1,0 +1,9 @@
+{
+  "name": "helio-enquiry-preview",
+  "private": true,
+  "scripts": {
+    "db:local": "wrangler d1 migrations apply helio-enquiries-preview --local",
+    "preview": "wrangler pages dev --port 8791"
+  },
+  "devDependencies": { "wrangler": "4.130.0" }
+}
